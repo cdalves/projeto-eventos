@@ -1,3 +1,35 @@
 #layout-inico{
-    margin-top: 2em;
+    margin-top: 1.5em;
 }
+
+#titulo-principal{
+    padding: 2px;
+    background-color: #7a75b5 ;
+    border-radius: 10px;
+}
+
+#titulo-principal h1{
+    color: white;
+    padding-left: 0.5em ;
+}
+
+#lateral{
+    /* background-color: rgb(194, 209, 209); */
+    
+}
+
+#titulo-lateral{
+    width: 100%;
+    padding: 0.5em;
+    background-color: #626262 ;
+    border-radius: 10px;
+}
+
+#titulo-lateral h2{
+    color: white;
+    padding-left: 0.5em;
+}
+
+
+
+
