@@ -1,11 +1,12 @@
 #evento{
     margin-top: 1em; 
     background-color: rgba(171, 173, 174, 0.223);
-    border-radius: 0 10px 10px 0;
-    text-indent: -1em;
+    border-radius: 0 10px 10px 0;   
+    
 }
 
-#evento img{
+#img-ev{
+    
     
 }
 
