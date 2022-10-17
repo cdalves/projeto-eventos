@@ -18,14 +18,8 @@
     padding-left: 0.5em ;
 }
 
-#principal conteudo{
-    
-}
 
-#lateral{
-    /* background-color: rgb(194, 209, 209); */
-    
-}
+
 
 #titulo-lateral{
     width: 100%;
@@ -39,6 +33,10 @@
     padding-left: 0.5em;
 }
 
-
+@media (max-width: 600px) {
+    div{
+        font-size: 10px;
+      }
+  }
 
 
