@@ -1,16 +1,23 @@
 <div class="container-flex" id="evento" >
-    <div class="row">
-        <div class="col-4">
-            <div id="img-ev">
-                <a href=""><img class="img-fluid rounded " src={{imagem}} alt=""></a>
-            </div>            
-        </div>
-        <div id="dados-ev" class="col-8">
-            <div>
-                <h1>{{ nome }}</h1>
-                <p class="text-truncate">{{ descricao }} </p>
-                <a href={{caminho}}>Saiba mais...</a>  
-            </div>
-                    
-        </div>    
+    <ul>
+        <li *ngFor="let evento of eventos">
+            <div class="row">
+                <div class="col-4">                            
+                    <div id="img-ev">
+                        <a href=""><img class="img-fluid rounded " src={{ evento.imagem }} alt=""></a>
+                    </div> 
+                </div>           
+                
+                <div id="dados-ev" class="col-8">
+                    <div>
+                        <h1>{{ evento.nome }}</h1>
+                        <p class="text-truncate">{{ evento.descricao }} </p>
+                        <a href={{ evento.caminho }}>Saiba mais...</a>
+                    </div>  
+                </div>
+                                 
+            </div> 
+        </li>
+    </ul>
+       
 </div>
