@@ -18,25 +18,19 @@
     padding-left: 0.5em ;
 }
 
+#lateral{
+    
+}
 
-
-
-#titulo-lateral{
+#busca-lateral{
     width: 100%;
     padding: 0.5em;
     background-color: #626262 ;
     border-radius: 10px;
 }
 
-#titulo-lateral h2{
-    color: white;
-    padding-left: 0.5em;
-}
 
-@media (max-width: 600px) {
-    div{
-        font-size: 10px;
-      }
-  }
+
+
 
 
