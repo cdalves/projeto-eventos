@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BarraNavComponent } from './barra-nav.component';
+import { TelaCadastroComponent } from './tela-cadastro.component';
 
-describe('BarraNavComponent', () => {
-  let component: BarraNavComponent;
-  let fixture: ComponentFixture<BarraNavComponent>;
+describe('TelaCadastroComponent', () => {
+  let component: TelaCadastroComponent;
+  let fixture: ComponentFixture<TelaCadastroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BarraNavComponent ]
+      declarations: [ TelaCadastroComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BarraNavComponent);
+    fixture = TestBed.createComponent(TelaCadastroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

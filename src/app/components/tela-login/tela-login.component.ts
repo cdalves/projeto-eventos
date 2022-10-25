@@ -6,18 +6,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tela-login.component.css']
 })
 export class TelaLoginComponent implements OnInit {
-  email:string ='';
-  senha: string= '';
+    email:string ='';
+    senha: string= '';
+
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  
+  getEmail(): string{
+    return this.email;
+  }
+  getSenha(): string{
+    return this.senha;
+  }
+
  getDados(): void{
-    console.log(this.email + this.senha)
-    
+      console.log('email: ' + this.email)
+      console.log('senha: ' + this.senha)
   }
 
 }

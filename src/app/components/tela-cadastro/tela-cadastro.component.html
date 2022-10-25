@@ -1,5 +1,9 @@
-<div class="container mt-5" id="tela-login">
+<div class="container mt-5" id="tela-cadastro">
     <form class="">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="digite seu Nome" [(ngModel)]="nome" name="nome">
+          </div>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
           <input type="email" class="form-control" id="email" placeholder="email@email.com" [(ngModel)]="email" name="email">
@@ -11,4 +15,3 @@
         <button type="button" (click)="getDados()" class="btn btn-primary">Logar</button>
       </form>
 </div>
-
