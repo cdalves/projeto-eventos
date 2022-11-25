@@ -14,19 +14,19 @@ export class EventoComponent implements OnInit {
   eventosRecentes: Eventos[] = [
   {
     imagem: 'https://distrito.me/wp-content/uploads/2022/06/Eventos-de-inovacao-confira-o-calendario-para-2022.png',
-    nome:'Encontro tec' ,
+    name:'Encontro tec' ,
     descricao:'Lorem ipsum dolor sit amet consectetur adipisicing elit.Et id veritatis nihil, libero maxime eos atque ab, fugit  explicabo maiores nostrum. Architecto voluptates enim, praesentium voluptatem aliquam fugiat tenetur pariatur. ',
     caminho:'https://www.google.com',
   },
   {
     imagem: "https://distrito.me/wp-content/uploads/2022/06/Eventos-de-inovacao-confira-o-calendario-para-2022.png",
-    nome:'Festival',
+    name:'Festival',
     descricao:'Lorem ipsum dolor sit amet consectetur adipisicing elit.Et id veritatis nihil, libero maxime eos atque ab, fugit  explicabo maiores nostrum. Architecto voluptates enim, praesentium voluptatem aliquam fugiat tenetur pariatur. ',
     caminho:"https://www.google.com",
   },
   {
     imagem: "https://distrito.me/wp-content/uploads/2022/06/Eventos-de-inovacao-confira-o-calendario-para-2022.png",
-    nome:'calourada',
+    name:'calourada',
     descricao:'Lorem ipsum dolor sit amet consectetur adipisicing elit.Et id veritatis nihil, libero maxime eos atque ab, fugit  explicabo maiores nostrum. Architecto voluptates enim, praesentium voluptatem aliquam fugiat tenetur pariatur. ',
     caminho:"https://www.google.com",
   },
@@ -34,7 +34,7 @@ export class EventoComponent implements OnInit {
 
   evento: Eventos = {
     imagem: 'test',
-    nome:'test',
+    name:'test',
     descricao: 'test',
     caminho: 'test',
   };
