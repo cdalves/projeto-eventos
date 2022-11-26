@@ -1,6 +1,7 @@
 export interface Eventos{
-    imagem: string;
+    id: string;
+    idUser: string;
     name: string;
     descricao: string;
-    caminho: string;
+    data: string;
 } 

@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Eventos } from "src/app/Eventos";
 
+import { EventosService } from 'src/app/services/eventos.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable, tap } from 'rxjs';
+
+
 @Component({
   selector: 'app-evento',
   templateUrl: './evento.component.html',
@@ -10,38 +15,27 @@ import { Eventos } from "src/app/Eventos";
   
 })
 export class EventoComponent implements OnInit {
+  
 
-  eventosRecentes: Eventos[] = [
-  {
-    imagem: 'https://distrito.me/wp-content/uploads/2022/06/Eventos-de-inovacao-confira-o-calendario-para-2022.png',
-    name:'Encontro tec' ,
-    descricao:'Lorem ipsum dolor sit amet consectetur adipisicing elit.Et id veritatis nihil, libero maxime eos atque ab, fugit  explicabo maiores nostrum. Architecto voluptates enim, praesentium voluptatem aliquam fugiat tenetur pariatur. ',
-    caminho:'https://www.google.com',
-  },
-  {
-    imagem: "https://distrito.me/wp-content/uploads/2022/06/Eventos-de-inovacao-confira-o-calendario-para-2022.png",
-    name:'Festival',
-    descricao:'Lorem ipsum dolor sit amet consectetur adipisicing elit.Et id veritatis nihil, libero maxime eos atque ab, fugit  explicabo maiores nostrum. Architecto voluptates enim, praesentium voluptatem aliquam fugiat tenetur pariatur. ',
-    caminho:"https://www.google.com",
-  },
-  {
-    imagem: "https://distrito.me/wp-content/uploads/2022/06/Eventos-de-inovacao-confira-o-calendario-para-2022.png",
-    name:'calourada',
-    descricao:'Lorem ipsum dolor sit amet consectetur adipisicing elit.Et id veritatis nihil, libero maxime eos atque ab, fugit  explicabo maiores nostrum. Architecto voluptates enim, praesentium voluptatem aliquam fugiat tenetur pariatur. ',
-    caminho:"https://www.google.com",
-  },
-  ];
+  eventos: Eventos[] = [];
 
   evento: Eventos = {
-    imagem: 'test',
+    id: 'test',
+    idUser: 'test',
     name:'test',
     descricao: 'test',
-    caminho: 'test',
+    data: 'test',
   };
 
-  constructor() { }
+  constructor(private eventoServive: EventosService ) { 
+    this.getEventos();
+  }
 
   ngOnInit(): void {
   }
+
+  getEventos(): void {
+    this.eventoServive.getAll().subscribe((eventos) => (this.eventos = eventos));
+  }  
 
 }
