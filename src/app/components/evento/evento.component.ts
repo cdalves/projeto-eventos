@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Eventos } from "src/app/Eventos";
 
 import { EventosService } from 'src/app/services/eventos.service';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+
 
 
 @Component({
