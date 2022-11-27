@@ -1,4 +1,4 @@
-<div class="container mt-5" id="tela-login">
+<div class="container" id="tela-login">
     <form class="">
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email</label>
@@ -8,7 +8,7 @@
           <label for="exampleInputPassword1" class="form-label">Senha</label>
           <input type="password" class="form-control" id="senha" placeholder="digite sua senha" [(ngModel)]="senha" name="senha">
         </div>
-        <button type="button" (click)="getDados()" class="btn btn-primary">Logar</button>
+        <button type="button" (click)="getDados()" routerLink="/usuario" class="btn btn-primary">Logar</button>
       </form>
 </div>
 
