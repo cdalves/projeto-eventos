@@ -8,7 +8,7 @@ import { Observable, tap } from 'rxjs';
   providedIn: 'root'
 })
 export class EventosService {
-  private apiUrl = '/eventos'
+  private apiUrl = 'http://localhost:8080/eventos'
 
   constructor(private http: HttpClient) { }
 
