@@ -1,5 +1,5 @@
 export interface Eventos{
-    id: string;
+    id: number;
     idUser: string;
     name: string;
     descricao: string;

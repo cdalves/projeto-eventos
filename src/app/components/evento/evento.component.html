@@ -5,7 +5,7 @@
                 <!-- img do evento -->
                 <div class="col-4">                            
                     <div id="img-ev">
-                        <!-- <a href=""><img class="img-fluid rounded " src={{evento.imagem}} alt=""></a> -->
+                        <a href=""><img class="img-fluid rounded " src="../assets/imgPadrao.jpg"   alt=""></a>
                     </div> 
                 </div>        
                 <!-- conteudo do evento -->
@@ -13,8 +13,7 @@
                     <div>
                         <h1>{{evento.name}}</h1>
                         <p class="text-truncate">{{evento.descricao}} </p>
-                        
-                        <a href={{evento.data}}>Saiba mais...</a>
+                        <a routerLink="eventos/{{evento.id}}" >Saiba mais...</a>
                     </div>  
                 </div>                                 
             </div> 

@@ -15,4 +15,10 @@ export class EventosService {
   getAll(): Observable<Eventos[]> {
     return this.http.get<Eventos[]>(this.apiUrl);
   }
+
+  getItem(id: number): Observable<Eventos>{
+    return this.http.get<Eventos>(`${this.apiUrl}/${id}`)
+
+  }
+
 }

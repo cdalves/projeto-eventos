@@ -13,18 +13,9 @@ import { EventosService } from 'src/app/services/eventos.service';
  
   
 })
-export class EventoComponent implements OnInit {
-  
+export class EventoComponent implements OnInit { 
 
   eventos: Eventos[] = [];
-
-  evento: Eventos = {
-    id: 'test',
-    idUser: 'test',
-    name:'test',
-    descricao: 'test',
-    data: 'test',
-  };
 
   constructor(private eventoServive: EventosService ) { 
     this.getEventos();
