@@ -12,6 +12,7 @@ import { TelaLoginComponent } from './components/tela-login/tela-login.component
 import { TelaCadastroComponent } from './components/tela-cadastro/tela-cadastro.component';
 import { PagEventoComponent } from './components/pag-evento/pag-evento.component';
 import { PagUserComponent } from './components/pag-user/pag-user.component';
+import { CadEventoComponent } from './components/cad-evento/cad-evento.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PagUserComponent } from './components/pag-user/pag-user.component';
     TelaLoginComponent,
     TelaCadastroComponent,
     PagEventoComponent,
-    PagUserComponent
+    PagUserComponent,
+    CadEventoComponent
   ],
   imports: [
     BrowserModule,
