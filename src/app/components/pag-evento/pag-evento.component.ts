@@ -25,4 +25,8 @@ export class PagEventoComponent implements OnInit {
     this.eventoService.getItem(id).subscribe((eventos) => (this.eventoItem = eventos));
   }
 
+  removeEvento(id : number) {
+    this.eventoService.remove(id).subscribe();
+    window.open(document.referrer,'_self');
+  }
 }

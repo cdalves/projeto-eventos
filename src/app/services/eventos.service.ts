@@ -21,4 +21,8 @@ export class EventosService {
 
   }
 
+  remove(id: number) {
+    return this.http.delete<Eventos>(`${this.apiUrl}/${id}`);
+  }
+
 }
