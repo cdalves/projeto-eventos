@@ -1,16 +1,16 @@
 <div id="userArea" class="container">
     <div class="row">
-        <div id="userOption" class="col-3" style="border: 1px solid red ;">
+        <div id="userOption" class="col-3">
                 <div id="imgUser"><img class="img-fluid w-50" src="../assets/user.png" alt=""></div>
-                <h2 class="">Username</h2>
-                <ul>
-                    <li class="list-unstyled"><a href="">Criar eveto</a></li>
+                <h2 class="">{{usuario.nameUser}}</h2>
+                <ul class="mt-3">
+                    <li class="list-unstyled"><a href="">CRIAR EVENTO</a></li>
 
                 </ul>
 
         </div>
 
-        <div class="col-9" style="border: 1px solid rgb(109, 182, 60) ;">
+        <div class="col-9">
             <app-evento></app-evento>
         </div>
     </div>

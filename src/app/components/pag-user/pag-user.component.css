@@ -3,11 +3,32 @@
 }
 
 #userOption{
-    
+    margin-top: 1em;
+    height: 500px;
+    background-color: rgba(171, 173, 174, 0.223);
+    border-radius: 5px;
 }
 
 #userOption h2{
     text-align: center;
+}
+
+#userOption ul{
+    text-align: center;
+}
+
+#userOption li a{
+    color: rgb(0, 0, 0) ;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+
+}
+
+#userOption li a:hover{
+    color: white ;
+    background-color: black;
+    border-radius: 5px;
 }
 
 #imgUser{

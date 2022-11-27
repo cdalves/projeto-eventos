@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagUserComponent implements OnInit {
 
+  usuario = {
+    nameUser: "Joao silva",
+    IdUser: "1"
+  };
+
   constructor() { }
 
   ngOnInit(): void {
