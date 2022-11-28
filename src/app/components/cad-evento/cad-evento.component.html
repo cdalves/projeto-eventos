@@ -1,15 +1,13 @@
 <div id="cadEvento" class="container">
-    <form class="">
+    <form [formGroup]="form" (submit)="cadEvento()">
         <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="name" placeholder="digite o nome" [(ngModel)]="name" name="name">
+            <input type="text" class="form-control" formControlName="name" id="name" placeholder="digite o nome">
           </div>
         <div class="mb-3">
         <label  for="descricao" class="form-label">Descrição</label>
-        <textarea class="form-control" iid="descricao" rows="3" [(ngModel)]="descricao" name="descricao"></textarea>
+        <textarea class="form-control" formControlName="descricao" iid="descricao" rows="3" ></textarea>
       </div>
-        <button type="button"  class="btn btn-primary" (click)="getDados()">Cadastrar evento</button>
-      </form>
-
-      
+        <button type="button" (click)="cadEvento()" class="btn btn-primary">Cadastrar evento</button>
+      </form>      
 </div>

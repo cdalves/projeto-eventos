@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { Eventos } from 'src/app/Eventos';
+import { EventosService } from 'src/app/services/eventos.service';
 
 @Component({
   selector: 'app-cad-evento',
@@ -7,17 +9,25 @@ import { Eventos } from 'src/app/Eventos';
   styleUrls: ['./cad-evento.component.css']
 })
 export class CadEventoComponent implements OnInit {
-  name: string = '' ;
-  descricao:string = '';
+  public form! :FormGroup;
+    
 
-
-
-  constructor() { }
+  constructor(private eventoservice: EventosService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.form = this.formBuilder.group({
+      idUser: 1,
+      name: [],
+      descricao: [],
+      data: "00"    
+    })
+  }  
+
+  cadEvento(){
+    if(this.form.valid){
+      this.eventoservice.creat(this.form.value).subscribe();
+      console.log(this.form.value);
+    }
   }
 
-  getDados(): void{
-    console.log(this.name, this.descricao)
-  }
 }

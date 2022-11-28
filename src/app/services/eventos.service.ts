@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Eventos } from '../Eventos';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, tap } from 'rxjs';
+import { Observable, take, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +23,10 @@ export class EventosService {
 
   remove(id: number) {
     return this.http.delete<Eventos>(`${this.apiUrl}/${id}`);
+  }
+
+  creat(evento: Eventos) {
+    return this.http.post(this.apiUrl, evento).pipe(take(1));
   }
 
 }
