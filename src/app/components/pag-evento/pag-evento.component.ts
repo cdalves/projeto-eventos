@@ -31,6 +31,6 @@ export class PagEventoComponent implements OnInit {
 
   removeEvento(id : number) {
     this.eventoService.remove(id).subscribe();
-    window.open(document.referrer,'_self');
+    window.location.href = "http://localhost:4200/usuario";    
   }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Eventos } from 'src/app/Eventos';
+import { CheckIdService } from 'src/app/services/check-id.service';
 import { EventosService } from 'src/app/services/eventos.service';
 
 @Component({
@@ -12,21 +13,25 @@ export class CadEventoComponent implements OnInit {
   public form! :FormGroup;
     
 
-  constructor(private eventoservice: EventosService, private formBuilder: FormBuilder) { }
-
+  constructor(private eventoservice: EventosService, private formBuilder: FormBuilder, private iduserserve: CheckIdService) { }
+  
   ngOnInit(): void {
+    const idCreat = this.iduserserve.getcheckId();
+
     this.form = this.formBuilder.group({
-      idUser: 1,
+      idUser: idCreat,
       name: [],
       descricao: [],
-      data: "00"    
+      data: null    
     })
   }  
 
   cadEvento(){
     if(this.form.valid){
       this.eventoservice.creat(this.form.value).subscribe();
-      console.log(this.form.value);
+      console.log(this.form.value)
+      alert('evento criado com sucesso!')
+      this.form.reset();
     }
   }
 
