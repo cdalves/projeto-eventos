@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CheckIdService } from 'src/app/services/check-id.service';
+import { Usuario } from 'src/app/Usuario';
 
 @Component({
   selector: 'app-pag-user',
@@ -7,14 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PagUserComponent implements OnInit {
 
-  usuario = {
-    nameUser: "Joao silva",
-    IdUser: "1"
+  usuario: Usuario = {
+    name: "Joao silva",
+    idUser: 1,
+    email: "joao@email.com",
+    senha: "joao123"
   };
+  
+  private id = this.usuario.idUser;
 
-  constructor() { }
+  constructor(private checkidservice: CheckIdService ) { }
 
   ngOnInit(): void {
-  }
 
+  }
+  retId(){
+    this.checkidservice.setChechId(this.usuario.idUser);
+  }
 }

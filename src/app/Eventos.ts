@@ -1,6 +1,6 @@
 export interface Eventos{
     id: number;
-    idUser: string;
+    idUser: number;
     name: string;
     descricao: string;
     data: string;

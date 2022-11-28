@@ -9,20 +9,23 @@
     border-radius: 5px;
 }
 
-#userOption h2{
+#userOption {
     text-align: center;
 }
 
-#userOption ul{
-    text-align: center;
-}
+#userOption ul {
+    display: inline;
+    
 
+}
 #userOption li a{
     color: rgb(0, 0, 0) ;
     text-decoration: none;
     font-weight: bold;
     padding: 5px;
-
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
 }
 
 #userOption li a:hover{
@@ -34,4 +37,9 @@
 #imgUser{
     margin-top: 10px;
     text-align: center;
+}
+
+#email{
+    text-align: center;
+    font-size: 0.9em;
 }

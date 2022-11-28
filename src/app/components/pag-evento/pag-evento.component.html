@@ -9,8 +9,8 @@
                         </div>  
                         <p class="">{{eventoItem.descricao}} </p>
                     </div>  
-                    
-                    <div>
+                    <!-- botoes -->
+                    <div *ngIf="(checkId === eventoItem.idUser)">
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <span>Deletar evento</span>
                         </button>
