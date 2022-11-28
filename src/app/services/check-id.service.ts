@@ -12,9 +12,7 @@ export class CheckIdService {
     return this.idCheck;
   }
   setChechId(id: any){
-    console.log(this.idCheck);
     this.idCheck = id;
-    console.log(this.idCheck);
   }
 
 }

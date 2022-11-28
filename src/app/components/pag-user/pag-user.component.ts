@@ -18,12 +18,11 @@ export class PagUserComponent implements OnInit {
   
   private id = this.usuario.idUser;
 
-  constructor(private checkidservice: CheckIdService ) { }
+  constructor(private checkidservice: CheckIdService ) { 
+  }
 
   ngOnInit(): void {
-
-  }
-  retId(){
     this.checkidservice.setChechId(this.usuario.idUser);
   }
+
 }
