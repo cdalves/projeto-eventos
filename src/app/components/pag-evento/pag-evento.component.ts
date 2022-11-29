@@ -27,11 +27,16 @@ export class PagEventoComponent implements OnInit {
 
     console.log(this.eventoItem?.id)
     this.form = this.formBuilder.group({
-      id: 1,
+      id: this.getId(),
+      idUser: this.checkId,
       name: [],
       descricao: []
     })
   }  
+
+  getId(): Number {
+    return Number(this.route.snapshot.paramMap.get("id"));
+  }
 
   getEvento(){
     const id = Number(this.route.snapshot.paramMap.get("id"));
