@@ -9,28 +9,66 @@
                         </div>  
                         <p class="">{{eventoItem.descricao}} </p>
                     </div>  
-                    <!-- botoes -->
-                    <div *ngIf="(checkId === eventoItem.idUser)">
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <span>Deletar evento</span>
-                        </button>
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Aviso</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    
+                    <!-- <div *ngIf="(checkId === eventoItem.idUser)"> -->
+                        <!-- botao editar -->
+                        <div>
+                        <div id="btEditar">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal" data-bs-whatever="@mdo">Editar evento</button>
+        
+                            <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Informe as mudanças</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form>
+                                      <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label">Nome:</label>
+                                        <input type="text" class="form-control" id="recipient-name">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Descrição:</label>
+                                        <textarea class="form-control" id="message-text"></textarea>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" class="btn btn-primary">Salvar</button>
+                                  </div>
                                 </div>
-                                <div class="modal-body">
-                                <p>Aplicar alteração? Após deletar não será possivel reverter!</p>
-                                </div>
-                                <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                <button type="button" (click)="removeEvento(eventoItem.id)" class="btn btn-danger">Deletar</button>
-                                </div>
-                            </div>
+                              </div>
                             </div>
                         </div>
+
+
+                        <!-- botao delete -->
+                        <div id="btDelete">
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                <span>Deletar evento</span>
+                            </button>
+                            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Aviso</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <p>Aplicar alteração? Após deletar não será possivel reverter!</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" (click)="removeEvento(eventoItem.id)" class="btn btn-danger">Deletar</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
     </div> 
 

@@ -21,6 +21,11 @@ export class EventosService {
 
   }
 
+  getName(name: string): Observable<Eventos>{
+    return this.http.get<Eventos>(`${this.apiUrl}/find/?name=${name}`)
+
+  }
+
   remove(id: number) {
     return this.http.delete<Eventos>(`${this.apiUrl}/${id}`);
   }

@@ -3,3 +3,13 @@
     margin-top: 100px;
     padding-bottom: 100px;
 }
+
+#btEditar{
+    display: inline;
+    padding: 5px;
+}
+ 
+#btDelete{
+    display: inline;
+    padding: 5px;
+}
