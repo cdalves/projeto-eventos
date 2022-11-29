@@ -8,14 +8,13 @@
                             <img class="img-fluid rounded " src="../assets/imgPadrao.jpg" alt="">
                         </div>  
                         <p class="">{{eventoItem.descricao}} </p>
-                        <span>{{eventoItem.id}}</span>
+                        <span>id: {{eventoItem.id}}</span>
                     </div>  
                     
-                    <!-- <div *ngIf="(checkId === eventoItem.idUser)"> -->
+                    <div *ngIf="(checkId === eventoItem.idUser)">
                         <!-- botao editar -->
-                        <div>
                         <div id="btEditar">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal" data-bs-whatever="@mdo">Editar evento</button>
+                            <button type="button" (click)="getid()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal" data-bs-whatever="@mdo">Editar evento</button>
         
                             <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
                               <div class="modal-dialog">
@@ -70,7 +69,7 @@
                             </div>
                         </div>
                         
-                    </div>
+                
     </div> 
 
                           
