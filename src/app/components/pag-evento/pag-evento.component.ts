@@ -16,7 +16,6 @@ export class PagEventoComponent implements OnInit {
   eventoItem?: Eventos;
   checkId: number = 0;
   public form!: FormGroup;
-  idEvento = 0;
 
   constructor(private eventoService: EventosService, private route: ActivatedRoute, private checkIdservece: CheckIdService, private formBuilder: FormBuilder) { 
     this.getEvento();
@@ -27,16 +26,12 @@ export class PagEventoComponent implements OnInit {
     this.checkId = this.checkIdservece.getcheckId();
 
     console.log(this.eventoItem?.id)
-
     this.form = this.formBuilder.group({
-      id: 0,
+      id: this.getid(),
       name: [],
       descricao: []
     })
-  }
-
-
-  
+  }  
 
   getEvento(){
     const id = Number(this.route.snapshot.paramMap.get("id"));
@@ -46,6 +41,11 @@ export class PagEventoComponent implements OnInit {
   removeEvento(id : number) {
     this.eventoService.remove(id).subscribe();
     window.location.href = "http://localhost:4200/usuario";    
+  }
+
+
+  getid(){
+    return this.eventoItem?.id;
   }
 
   editEvento(){
