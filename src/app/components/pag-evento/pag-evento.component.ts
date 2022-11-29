@@ -27,7 +27,7 @@ export class PagEventoComponent implements OnInit {
 
     console.log(this.eventoItem?.id)
     this.form = this.formBuilder.group({
-      id: this.getid(),
+      id: 1,
       name: [],
       descricao: []
     })
@@ -44,12 +44,7 @@ export class PagEventoComponent implements OnInit {
   }
 
 
-  getid(){
-    return this.eventoItem?.id;
-  }
-
-  editEvento(){
-    
+  editEvento(){    
     this.eventoService.edit(this.form.value).subscribe();
     console.log(this.form.value);
   }
