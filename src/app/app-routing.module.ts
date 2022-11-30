@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BuscaEventosComponent } from './components/busca-eventos/busca-eventos.component';
 import { CadEventoComponent } from './components/cad-evento/cad-evento.component';
 import { LayoutInicioComponent } from './components/layout-inicio/layout-inicio.component';
 import { PagEventoComponent } from './components/pag-evento/pag-evento.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'eventos/:id', component: PagEventoComponent},
   {path:'usuario/eventos/:id', component: PagEventoComponent},
   {path:'usuario', component: PagUserComponent},
-  {path:'usuario/cadEvento', component: CadEventoComponent}
+  {path:'usuario/cadEvento', component: CadEventoComponent},
+  {path:'busca', component: BuscaEventosComponent}
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./busca-eventos.component.css']
 })
 export class BuscaEventosComponent implements OnInit {
+public nomeBusca?: string = "fest";
 
   constructor() { }
 

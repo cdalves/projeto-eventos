@@ -1,16 +1,13 @@
-#layout-inico{
+#layout-busca{
     margin-top: 100px;
-    
-}
-
-#principal{
     width: 70%;
     min-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
-#titulo-principal{
+#titulo-busca{
+    color: white;
     text-align: center;
     padding-top: 2px;
     padding-bottom: 2px;
@@ -19,7 +16,3 @@
     
 }
 
-#titulo-principal h1{
-    color: white;
-    padding-left: 0.5em ;
-}

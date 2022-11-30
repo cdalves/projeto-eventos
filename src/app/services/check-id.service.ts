@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CheckIdService {
-  private idCheck: number = 0 ;
-
+  private idCheck!: number;
+  
   constructor() { }
 
   getcheckId(){

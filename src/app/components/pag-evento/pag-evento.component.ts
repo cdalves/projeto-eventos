@@ -23,7 +23,7 @@ export class PagEventoComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.checkId = this.checkIdservece.getcheckId();
+    this.checkId = this.checkIdservece.getcheckId();  
 
     console.log(this.eventoItem?.id)
     this.form = this.formBuilder.group({
@@ -47,11 +47,13 @@ export class PagEventoComponent implements OnInit {
     this.eventoService.remove(id).subscribe();
     window.location.href = "http://localhost:4200/usuario";    
   }
+  
 
 
   editEvento(){    
     this.eventoService.edit(this.form.value).subscribe();
-    console.log(this.form.value);
+    alert("Evento editado com sucesso");
+
   }
 
 }
