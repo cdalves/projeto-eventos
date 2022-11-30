@@ -8,10 +8,13 @@
                             <img class="img-fluid rounded " src="../assets/imgPadrao.jpg" alt="">
                         </div>  
                         <p class="">{{eventoItem.descricao}} </p>
-                        <span>id: {{eventoItem.id}}</span>
-                    </div>  
+              
+                    </div> 
+                    <div id="idlocal">
+                      <h6 id="ideveneto">id: {{eventoItem.id}}</h6>
+                    </div> 
                     
-                    <div *ngIf="(checkId === eventoItem.idUser)">
+                    <div id="botoes" *ngIf="(checkId === eventoItem.idUser)">
                         <!-- botao editar -->
                         <div id="btEditar">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal" data-bs-whatever="@mdo">Editar evento</button>
