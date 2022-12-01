@@ -46,8 +46,7 @@ export class PagEventoComponent implements OnInit {
   removeEvento(id : number) {
     this.eventoService.remove(id).subscribe();
     window.location.href = "http://localhost:4200/usuario";    
-  }
-  
+  }  
 
 
   editEvento(){    

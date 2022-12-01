@@ -23,7 +23,6 @@ export class EventosService {
 
   getName(name: string): Observable<Eventos>{
     return this.http.get<Eventos>(`${this.apiUrl}/find/?name=${name}`)
-
   }
 
   remove(id: number) {
