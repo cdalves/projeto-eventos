@@ -21,8 +21,8 @@
         </div>        
         <div class="container-fluid">
           <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Buscar evento">
-            <button class="btn btn-outline-light" routerLink="busca" type="button">Buscar</button>
+            <input class="form-control me-2" type="search" id="busca" [(ngModel)]="nomeBusca" name="busca" placeholder="Buscar evento">
+            <button class="btn btn-outline-light" (click)="findName()"  routerLink="busca" type="button">Buscar</button>
           </form>
         </div>      
       </div>

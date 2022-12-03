@@ -13,8 +13,6 @@ import { EventosService } from 'src/app/services/eventos.service';
 export class EventoComponent implements OnInit { 
 
   eventos: Eventos[] = [];
-  eventosbusca: Eventos[] = [];
-  nomeBusca?: string = "Teatro";
 
   constructor(private eventoServive: EventosService ) { 
     this.getEventos();
@@ -27,8 +25,5 @@ export class EventoComponent implements OnInit {
     this.eventoServive.getAll().subscribe((eventos) => (this.eventos = eventos));
   }  
 
-  // findEvento(): void{
-  //   this.eventoServive.getName(this.nomeBusca!).subscribe((eventos) => (this.eventosbusca = eventos));
-  // }
 
 }

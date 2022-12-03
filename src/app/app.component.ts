@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { EventosService } from './services/eventos.service';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,17 @@ import { Component } from '@angular/core';
 })
  
 export class AppComponent {
+ 
+  
   title = 'projeto-eventos';
-  showFind = 1;
+  nomeBusca!: string;
+
+  constructor(private eventoService: EventosService){}
 
   findName(): void{
-    this.showFind = 1;
-    window.location.reload();
+    this.eventoService.setBusca(this.nomeBusca);
+    
+    console.log("test")
   }
 
 }

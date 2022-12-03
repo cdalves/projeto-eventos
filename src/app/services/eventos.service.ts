@@ -3,14 +3,18 @@ import { Injectable } from '@angular/core';
 import { Eventos } from '../Eventos';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, take, tap } from 'rxjs';
+import { EventEmitter } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventosService {
   private apiUrl = 'http://localhost:8080/eventos'
+  public nomeFind?: string;
+  atualizarbusca: EventEmitter<any> = new EventEmitter();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+  }
 
   getAll(): Observable<Eventos[]> {
     return this.http.get<Eventos[]>(this.apiUrl);
@@ -21,8 +25,14 @@ export class EventosService {
 
   }
 
-  getName(name: string): Observable<Eventos>{
-    return this.http.get<Eventos>(`${this.apiUrl}/find/?name=${name}`)
+  setBusca(busca: string):void{
+    this.nomeFind = busca;
+    this.atualizarbusca.emit();    
+  }
+
+  findByName(): Observable<Eventos[]>{
+    return this.http.get<Eventos[]>(`${this.apiUrl}/find/?name=${this.nomeFind}`);
+    
   }
 
   remove(id: number) {
@@ -35,7 +45,6 @@ export class EventosService {
 
   edit(evento: Eventos){
     return this.http.put(this.apiUrl, evento).pipe(take(1));
-
   }
 
 }

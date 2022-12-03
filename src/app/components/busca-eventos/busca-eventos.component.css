@@ -15,4 +15,35 @@
     border-radius: 10px;
     
 }
+#principal{
+    width: 70%;
+    min-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#titulo-busca{
+    color: white;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #617e82 ;
+    border-radius: 10px;
+    
+}
+
+#evento li{
+    margin-top: 1em; 
+    background-color: rgba(171, 173, 174, 0.223);
+    border-radius: 0 10px 10px 0;   
+    
+}
+
+#imgEvento{
+    margin-right: auto;
+}
+
+#dados-ev{
+    margin: 2px;
+}
 
