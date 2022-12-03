@@ -6,7 +6,6 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventoComponent } from './components/evento/evento.component';
-import { LayoutInicioComponent } from './components/layout-inicio/layout-inicio.component';
 import { TelaLoginComponent } from './components/tela-login/tela-login.component';
 import { TelaCadastroComponent } from './components/tela-cadastro/tela-cadastro.component';
 import { PagEventoComponent } from './components/pag-evento/pag-evento.component';
@@ -18,7 +17,6 @@ import { BuscaEventosComponent } from './components/busca-eventos/busca-eventos.
   declarations: [
     AppComponent,
     EventoComponent,
-    LayoutInicioComponent,
     TelaLoginComponent,
     TelaCadastroComponent,
     PagEventoComponent,

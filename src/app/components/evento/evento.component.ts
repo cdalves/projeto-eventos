@@ -9,13 +9,12 @@ import { EventosService } from 'src/app/services/eventos.service';
   selector: 'app-evento',
   templateUrl: './evento.component.html',
   styleUrls: ['./evento.component.css']
-
- 
-  
 })
 export class EventoComponent implements OnInit { 
 
   eventos: Eventos[] = [];
+  eventosbusca: Eventos[] = [];
+  nomeBusca?: string = "Teatro";
 
   constructor(private eventoServive: EventosService ) { 
     this.getEventos();
@@ -27,5 +26,9 @@ export class EventoComponent implements OnInit {
   getEventos(): void {
     this.eventoServive.getAll().subscribe((eventos) => (this.eventos = eventos));
   }  
+
+  // findEvento(): void{
+  //   this.eventoServive.getName(this.nomeBusca!).subscribe((eventos) => (this.eventosbusca = eventos));
+  // }
 
 }

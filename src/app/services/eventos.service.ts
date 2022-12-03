@@ -35,7 +35,7 @@ export class EventosService {
 
   edit(evento: Eventos){
     return this.http.put(this.apiUrl, evento).pipe(take(1));
-    console.log(evento);
+
   }
 
 }
