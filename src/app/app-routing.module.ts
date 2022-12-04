@@ -16,7 +16,8 @@ const routes: Routes = [
   {path:'usuario/eventos/:id', component: PagEventoComponent},
   {path:'usuario', component: PagUserComponent},
   {path:'usuario/cadEvento', component: CadEventoComponent},
-  {path:'busca', component: BuscaEventosComponent}
+  {path:'busca', component: BuscaEventosComponent},
+  {path:'busca/eventos/:id', component: PagEventoComponent}
 ];
 
 @NgModule({

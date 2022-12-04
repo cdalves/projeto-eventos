@@ -26,7 +26,6 @@ eventosbusca: Eventos[] = [];
 
   findEvento():void{
      this.eventoService.findByName().subscribe((eventos) => (this.eventosbusca = eventos));
-     console.log("test 2")
   }
 
 
