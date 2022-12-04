@@ -11,7 +11,7 @@ import { EventEmitter } from '@angular/core';
 export class EventosService {
   private apiUrl = 'http://localhost:8080/eventos'
   public nomeFind?: string;
-  atualizarbusca: EventEmitter<any> = new EventEmitter();
+  atualizarbusca: EventEmitter<boolean> = new EventEmitter();
 
   constructor(private http: HttpClient) { 
   }
@@ -31,7 +31,7 @@ export class EventosService {
   }
 
   findByName(): Observable<Eventos[]>{
-    return this.http.get<Eventos[]>(`${this.apiUrl}/find/?name=${this.nomeFind}`);
+    return this.http.get<Eventos[]>(`${this.apiUrl}/find/?name=${this.nomeFind}`).pipe();
     
   }
 
