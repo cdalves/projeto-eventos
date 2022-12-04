@@ -9,23 +9,24 @@ import { EventosService } from 'src/app/services/eventos.service';
   styleUrls: ['./busca-eventos.component.css']
 })
 export class BuscaEventosComponent implements OnInit {
-public nomeBusca?: string;
 eventosbusca: Eventos[] = [];
 
   constructor(private eventoService: EventosService, private route: ActivatedRoute) { 
-    this.nomeBusca = eventoService.nomeFind;
     
   }
 
   ngOnInit(): void {
-    console.log(this.nomeBusca);
     this.eventoService.atualizarbusca.subscribe(
       x => this.findEvento()
       );
-  }
+  } 
+  
 
   findEvento():void{
      this.eventoService.findByName().subscribe((eventos) => (this.eventosbusca = eventos));
+     if(this.eventosbusca.length === 0){
+      alert("nao encontrado")
+     }
   }
 
 

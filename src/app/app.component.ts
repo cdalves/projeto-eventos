@@ -17,8 +17,6 @@ export class AppComponent {
 
   findName(): void{
     this.eventoService.setBusca(this.nomeBusca);
-    
-    console.log("test")
   }
 
 }
