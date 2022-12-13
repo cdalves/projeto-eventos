@@ -9,7 +9,7 @@ import { EventEmitter } from '@angular/core';
   providedIn: 'root'
 })
 export class EventosService {
-  private apiUrl = 'http://localhost:8080/eventos'
+  private apiUrl = 'http://localhost:8090/eventos'
   public nomeFind?: string;
   atualizarbusca: EventEmitter<boolean> = new EventEmitter();
 
