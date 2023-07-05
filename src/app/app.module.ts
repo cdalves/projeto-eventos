@@ -1,24 +1,35 @@
-import { NgModule } from '@angular/core';
+import { importProvidersFrom, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BarraNavComponent } from './components/barra-nav/barra-nav.component';
 import { EventoComponent } from './components/evento/evento.component';
-import { LayoutInicioComponent } from './components/layout-inicio/layout-inicio.component';
-import { CaroselEvComponent } from './components/carosel-ev/carosel-ev.component';
+import { TelaLoginComponent } from './components/tela-login/tela-login.component';
+import { TelaCadastroComponent } from './components/tela-cadastro/tela-cadastro.component';
+import { PagEventoComponent } from './components/pag-evento/pag-evento.component';
+import { PagUserComponent } from './components/pag-user/pag-user.component';
+import { CadEventoComponent } from './components/cad-evento/cad-evento.component';
+import { BuscaEventosComponent } from './components/busca-eventos/busca-eventos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BarraNavComponent,
     EventoComponent,
-    LayoutInicioComponent,
-    CaroselEvComponent
+    TelaLoginComponent,
+    TelaCadastroComponent,
+    PagEventoComponent,
+    PagUserComponent,
+    CadEventoComponent,
+    BuscaEventosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule, 
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

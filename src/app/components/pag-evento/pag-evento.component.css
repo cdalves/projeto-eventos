@@ -1,0 +1,28 @@
+#evento{
+    width: 70%;
+    margin-top: 100px;
+    padding-bottom: 100px; 
+    position: relative;
+}
+
+#botoes{
+    margin-top: 20px;
+}
+
+#btEditar{
+    display: inline;
+    padding: 5px;
+}
+ 
+#btDelete{
+    display: inline;
+    padding: 5px;
+}
+
+#ideveneto{
+    color:white;
+    background-color: rgba(0,0,0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+    display: inline;
+}

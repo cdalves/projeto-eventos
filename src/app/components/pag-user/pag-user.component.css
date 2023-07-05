@@ -1,0 +1,49 @@
+#userArea{
+    margin-top: 100px;
+}
+
+#userOption{
+    margin-top: 1em;
+    height: 500px;
+    background-color: rgba(171, 173, 174, 0.223);
+    border-radius: 5px;
+}
+
+#userOption {
+    text-align: center;
+}
+
+#userOption ul {
+    display: inline;
+    
+
+}
+#userOption li a{
+    color: rgb(0, 0, 0) ;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#userOption li a:hover{
+    color: white ;
+    background-color: black;
+    border-radius: 5px;
+}
+
+#imgUser{
+    margin-top: 10px;
+    text-align: center;
+}
+
+#email{
+    text-align: center;
+    font-size: 0.9em;
+}
+
+#iniConteudo{
+    margin-top: -100px;
+}

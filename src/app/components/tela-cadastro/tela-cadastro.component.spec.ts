@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CaroselEvComponent } from './carosel-ev.component';
+import { TelaCadastroComponent } from './tela-cadastro.component';
 
-describe('CaroselEvComponent', () => {
-  let component: CaroselEvComponent;
-  let fixture: ComponentFixture<CaroselEvComponent>;
+describe('TelaCadastroComponent', () => {
+  let component: TelaCadastroComponent;
+  let fixture: ComponentFixture<TelaCadastroComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CaroselEvComponent ]
+      declarations: [ TelaCadastroComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CaroselEvComponent);
+    fixture = TestBed.createComponent(TelaCadastroComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

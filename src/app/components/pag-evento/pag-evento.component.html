@@ -1,0 +1,80 @@
+<div class="container"  id="evento" >
+    <div *ngIf="eventoItem" > 
+                <!-- conteudo do evento -->
+                    <div>
+                        <h1>{{eventoItem.name}}</h1>
+
+                        <div id="img-ev">
+                            <img class="img-fluid rounded " src="../assets/imgPadrao.jpg" alt="">
+                        </div>  
+                        <p class="">{{eventoItem.descricao}} </p>
+              
+                    </div> 
+                    <div id="idlocal">
+                      <h6 id="ideveneto">id: {{eventoItem.id}}</h6>
+                    </div> 
+                    
+                    <div id="botoes" *ngIf="(checkId === eventoItem.idUser)">
+                        <!-- botao editar -->
+                        <div id="btEditar">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editarModal" data-bs-whatever="@mdo">Editar evento</button>
+        
+                            <div class="modal fade" id="editarModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Informe as mudanças</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form [formGroup]="form" (submit)="editEvento()">
+                                      <div class="mb-3">
+                                        <label for="recipient-name" class="col-form-label" >Nome:</label>
+                                        <input type="text" [(ngModel)]="eventoItem.name" formControlName="name" class="form-control" id="recipient-name">
+                                      </div>
+                                      <div class="mb-3">
+                                        <label for="message-text" class="col-form-label">Descrição:</label>
+                                        <textarea   class="form-control" [(ngModel)]="eventoItem.descricao"  formControlName="descricao" id="message-text" ></textarea>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                                    <button type="button" (click)="editEvento()" class="btn btn-primary">Salvar</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+
+                        <!-- botao delete -->
+                        <div id="btDelete">
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                <span>Deletar evento</span>
+                            </button>
+                            <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Aviso</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                    <p>Aplicar alteração? Após deletar não será possivel reverter!</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                    <button type="button" (click)="removeEvento(eventoItem.id)" class="btn btn-danger">Deletar</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                
+    </div> 
+
+                          
+</div>
+

@@ -1,8 +1,20 @@
-#layout-inico{
+#layout-busca{
     margin-top: 100px;
-    
+    width: 70%;
+    min-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+#titulo-busca{
+    color: white;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #617e82 ;
+    border-radius: 10px;
+    
+}
 #principal{
     width: 70%;
     min-width: 800px;
@@ -10,7 +22,7 @@
     margin-right: auto;
 }
 
-#titulo-principal{
+#titulo-busca{
     color: white;
     text-align: center;
     padding-top: 2px;
